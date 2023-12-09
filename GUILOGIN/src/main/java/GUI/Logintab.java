@@ -221,15 +221,10 @@ public class Logintab extends javax.swing.JFrame {
             lblErrorp.setText("Email/password should not be empty.");
 
         }
-        String filePath = "F:\\NetBeans 19\\Projects\\UPDATEDREG-main\\GUILOGIN\\DATA\\" + txtEmail.getText() + ".txt";
-        Path path = Paths.get(filePath);
+        
 
         if (Files.exists(path)) {
             try {
-                List<String> lines = Files.readAllLines(path);
-
-                for (int i = 0; i < lines.size(); i++) {
-                    String line = lines.get(i);
                     if(txtEmail.getText().equalsIgnoreCase("")||txtEmail.getText().equalsIgnoreCase("Email")&&
                         PassF.getText().equalsIgnoreCase("")||PassF.getText().equalsIgnoreCase("Password")){
                         txtEmail.setBackground(Color.red);
