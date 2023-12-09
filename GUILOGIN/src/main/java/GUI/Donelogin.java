@@ -134,27 +134,7 @@ public class Donelogin extends javax.swing.JFrame {
             
     }//GEN-LAST:event_btnUpdateActionPerformed
 
-     void Display(String Email){
-        String filePath = "F:\\NetBeans 19\\Projects\\UPDATEDREG-main\\GUILOGIN\\DATA\\" + Email + ".txt";
-        Path path = Paths.get(filePath);
-        email = Email;
-        
-        if (Files.exists(path)) {
-            try {
-                List<String> lines = Files.readAllLines(path);
-                for (int i = 0; i < lines.size(); i++) {
-                    String line = lines.get(i);
-                        lblWelcome.setText("Welcome "+lines.get(0)+"...");
-                        lblWelcome1.setText("\nGender: "+lines.get(1));
-                        lblWelcome2.setText("\nCOURSE/YEAR: "+lines.get(2));
-                        lblWelcome3.setText("\nHobby: "+lines.get(3));
-                    } 
-                }catch (IOException e) {
-                e.printStackTrace();
-            }
-            
-        } 
-    }
+     
      
     /**
      * @param args the command line arguments
